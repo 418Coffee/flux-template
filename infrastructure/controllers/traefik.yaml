@@ -5,12 +5,28 @@ metadata:
   name: traefik
 ---
 apiVersion: source.toolkit.fluxcd.io/v1beta2
-kind: HelmChart
+kind: HelmRepository
 metadata:
   name: traefik
   namespace: traefik
 spec:
-  chart: traefik
-  repo: https://traefik.github.io/charts
-  targetNamespace: traefik
-  bootstrap: true
+  interval: 24h
+  url: https://traefik.github.io/charts
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: traefik
+  namespace: traefik
+spec:
+  interval: 30m
+  chart:
+    spec:
+      chart: traefik
+      sourceRef:
+        kind: HelmRepository
+        name: traefik
+        namespace: traefik
+      interval: 12h
+  #values:
+  #
