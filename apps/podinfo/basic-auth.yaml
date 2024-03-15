@@ -1,11 +1,12 @@
 apiVersion: v1
 data:
-    TOKEN: RU5DW0FFUzI1Nl9HQ00sZGF0YTpadUJORU5Tc25yUT0saXY6WW12aVZNak5CVUt0NWwrUVY2cCtvZjdmYlQ3Q1hXQ2JWOGJpUmpRTGpjRT0sdGFnOkpvbkVON2d5UlNJdWpVNG9CWHJzUGc9PSx0eXBlOnN0cl0K
+    TOKEN: ENC[AES256_GCM,data:ZuBNENSsnrQ=,iv:YmviVMjNBUKt5l+QV6p+of7fbT7CXWCbV8biRjQLjcE=,tag:JonEN7gyRSIujU4oBXrsPg==,type:str]
 kind: Secret
 metadata:
     creationTimestamp: null
     name: basic-auth
     namespace: default
+type: Opaque
 sops:
     kms: []
     gcp_kms: []
