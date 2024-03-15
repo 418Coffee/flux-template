@@ -1,7 +1,6 @@
 apiVersion: v1
 data:
-    password: ENC[AES256_GCM,data:toflLxlkesYFi/H/,iv:X0un3YdyNmdk6WiFdGvp/EJcVVJjCAUj34IM7kqA3bw=,tag:Nb5eZ6C6N6dk7KeckCFYdQ==,type:str]
-    user: ENC[AES256_GCM,data:I9/L8GS4s7o=,iv:57PuTs8pDL1WiHjrhzROX6M6HB3pPhzEbmQ7/Y6zkzg=,tag:rhs+MT1VIVIldhj4QhjbvA==,type:str]
+  TOKEN: ENC[AES256_GCM,data:AcB+L2sZyIA=,iv:6FKu54u9GkUPS2hph0TlCeJ10N2me+hghtepqVWe50k=,tag:wXUknox6UmvMUKDBppwlDw==,type:str]
 kind: Secret
 metadata:
     creationTimestamp: null
@@ -13,19 +12,19 @@ sops:
     azure_kv: []
     hc_vault: []
     age: []
-    lastmodified: "2024-03-15T16:00:54Z"
-    mac: ENC[AES256_GCM,data:P6fULjoZhNxOH7hfZAYK2Njypkp1EfoeJR7QVSrMzlgdH81UDSSX86yixGjGY3CX0vBH1K/5blnNR0isDA381dIN/r1CtjWaFpp3xYvp8iN0L8h26Gq2JAavGnP6X1QTnIjJ5hLVU3wZ2PSpjSwS3UJc3CuNHZpY3FNy+KjtoRw=,iv:n/nO/qtSIJUfz+YkwYxAnkPAHOnQDWx8Qly8eRHFEhc=,tag:53dzFakLLubHWoTtX3wT7A==,type:str]
+    lastmodified: "2024-03-15T16:09:55Z"
+    mac: ENC[AES256_GCM,data:9SaXVpFIfYgOfzo/BsArMTdMSOfz9scAWdc7Qu/VFfkjY4uj5Dg/x0ZDOuGBd0ZWdhZvQ6+vvrWKWIcVJDVef+gYKCf13/F51IFbVNA7HpyTnyOwPkEtqkU2lPGxTTAEX0V5x6pYYEyvDVrnMaBmm++kDD2wgSM6UpXA2aqrUFU=,iv:2ELH6tnIYhZ35lovZaCv3N1OiFKKbqsA+0qd9zvJhs0=,tag:UV4xOu0Ved3URnjrX6M1+w==,type:str]
     pgp:
-        - created_at: "2024-03-15T16:00:54Z"
+        - created_at: "2024-03-15T16:09:55Z"
           enc: |-
             -----BEGIN PGP MESSAGE-----
 
-            hF4DX+bAkBckFqQSAQdAnOf0betdKDHYsBdfavvyD0IXyyABg0/H/NpFiVLi1Vgw
-            qdU2e0qmsUWqeVbZoRIbRtDriKlq3AnhD86ppZPDS+czQIR1DlO/ICxDbnj3wiGc
-            1GgBCQIQd+dI61lte3HNDZZSEI4aN/ITmNjGD8RM13KfyMbAN5wvmXGNGi1Cc45Y
-            OmeE1S7rV/N0ufVENqzSODayBJ8lq2KIPGr0hY+3GgbDneKVEijt5OjyvX4gQZIs
-            AtJCQ+gUTljOTQ==
-            =m8eO
+            hF4DX+bAkBckFqQSAQdAobKnkUxcccTXIStX2CPSkeTRADOShYYp2SS7HR36LAsw
+            4GUBhwbe2VS3FwIVBU2kwaNgKhjCwv6vtdU0rGVOizVoViWF0IFzadxpWpAnnS6b
+            1GYBCQIQwY8/O1EjMdkBCe17XgO8yAsfbIzu4dQ9kRtCrr7Me4lleDU7VxuhQXvr
+            EOYigTjaoSPw/r2o4S334mv6UWsVEAgF+8lX1g7qEp9lZJxXuHN1yk8uqfrmazTV
+            8BZpvoe8o7A=
+            =dm8X
             -----END PGP MESSAGE-----
           fp: 6C3BCD35DF04CE8A32871812068E9CB30A978247
     encrypted_regex: ^(data|stringData)$
