@@ -1,34 +1,31 @@
 apiVersion: v1
+data:
+    password: ENC[AES256_GCM,data:toflLxlkesYFi/H/,iv:X0un3YdyNmdk6WiFdGvp/EJcVVJjCAUj34IM7kqA3bw=,tag:Nb5eZ6C6N6dk7KeckCFYdQ==,type:str]
+    user: ENC[AES256_GCM,data:I9/L8GS4s7o=,iv:57PuTs8pDL1WiHjrhzROX6M6HB3pPhzEbmQ7/Y6zkzg=,tag:rhs+MT1VIVIldhj4QhjbvA==,type:str]
 kind: Secret
 metadata:
-    name: example-secret
+    creationTimestamp: null
+    name: basic-auth
     namespace: default
-data:
-    auth-extra-groups: ENC[AES256_GCM,data:+Lm5F00TWWx/xVdIV+/cXZnGEHnvDJHzD8tQO9ebcZ197HWLvJssn2kjllErfT9+Sm9Kq2kudS3tyhXuaBF07g==,iv:33rCDR2rE918XHtU6Mwus27rzCL2oB/5Fp1t1i5+DVU=,tag:7lo6OCPe7as0m6ZWglFD7g==,type:str]
-    expiration: ENC[AES256_GCM,data:FL8JQ1qQLvrLkjWQxWw6LhVYFoojgUungAO+TA==,iv:2p9zSOW2il0g4zlBTXDHpATptuxGfUMhF9pic7EQ/hA=,tag:uQBdB4bEQKcJ3ep5XDcxRw==,type:str]
-    token-id: ENC[AES256_GCM,data:A4Rc+ovH4oQ=,iv:kdFe1/IkBdaiL7sy3DTHptd+R2JiqJm8KVBGO2YwPKY=,tag:UCm7QFF0OdwYtepb6XSWxw==,type:str]
-    token-secret: ENC[AES256_GCM,data:txrqn3xbW8OKfb8hMgiEGlfOArnb/rFT,iv:M6cea2dT+NgHjenhgG3SXOTmqTnRYuMbgi1ico0Nsyo=,tag:u4J2TSHGVN5o3YQgx6gcnw==,type:str]
-    usage-bootstrap-authentication: ENC[AES256_GCM,data:scs0bxsnDCE=,iv:e+olDxSy3RFlUPoJS3lakC3xk3alLn+SFOsyy5fcl14=,tag:VA80YpXUYKhyJ8SKr11LTw==,type:str]
-    usage-bootstrap-signing: ENC[AES256_GCM,data:szMjI2q8uOI=,iv:KjtwEzbDTdmP+bguvv91ioL39bXFNRKyNb1fG22RUqo=,tag:Jw5Cp3Zeutea0ifqHPuClg==,type:str]
 sops:
     kms: []
     gcp_kms: []
     azure_kv: []
     hc_vault: []
     age: []
-    lastmodified: "2024-03-15T15:57:04Z"
-    mac: ENC[AES256_GCM,data:EvpzrvsK4NXXxDSU5fv/fEbsxasyI1hb/uibVIMthutj4VxBc7JrrhhFXgb4V97I7qO6pO6xiQfEyMJNmr2gvg/2mQUKYT+OMT53DwQXjWhCivqyXO2Q76NdN4KB45axRlLeg6w+SKd9vmke3ssYJgnXwdKMgESTcEmyjnA2G3Q=,iv:ko3Mw9JdfY/U0fBeThQk501HEtXyvihjcC5h5xWWBAo=,tag:jIvXDXyuxL0cszOL+XxHOw==,type:str]
+    lastmodified: "2024-03-15T16:00:54Z"
+    mac: ENC[AES256_GCM,data:P6fULjoZhNxOH7hfZAYK2Njypkp1EfoeJR7QVSrMzlgdH81UDSSX86yixGjGY3CX0vBH1K/5blnNR0isDA381dIN/r1CtjWaFpp3xYvp8iN0L8h26Gq2JAavGnP6X1QTnIjJ5hLVU3wZ2PSpjSwS3UJc3CuNHZpY3FNy+KjtoRw=,iv:n/nO/qtSIJUfz+YkwYxAnkPAHOnQDWx8Qly8eRHFEhc=,tag:53dzFakLLubHWoTtX3wT7A==,type:str]
     pgp:
-        - created_at: "2024-03-15T15:57:04Z"
+        - created_at: "2024-03-15T16:00:54Z"
           enc: |-
             -----BEGIN PGP MESSAGE-----
 
-            hF4DX+bAkBckFqQSAQdAHmD1xa2849Kx9PBQ5NBTC5npApex6ZgmMKAvBn+5ZGkw
-            G5xPCTPq/6ZkOhAS0GztIpjaxnsxQ9l1YwS8+O0ZDil+3b8otiP0ru2gl2iav0ul
-            1GgBCQIQ/7lb7HjA0o9DN9LYYjaVAKUJkzuV0EJh+JGKVaG6qz97pLiKy6TJEfyG
-            /jJhxu28V3PAxoyUJjAGR/h4FIyzQw92ZGf0r9bJ7++VWcAZaRkFgIoV6TIOffnY
-            CiIm3t1oTTBZRw==
-            =sdGP
+            hF4DX+bAkBckFqQSAQdAnOf0betdKDHYsBdfavvyD0IXyyABg0/H/NpFiVLi1Vgw
+            qdU2e0qmsUWqeVbZoRIbRtDriKlq3AnhD86ppZPDS+czQIR1DlO/ICxDbnj3wiGc
+            1GgBCQIQd+dI61lte3HNDZZSEI4aN/ITmNjGD8RM13KfyMbAN5wvmXGNGi1Cc45Y
+            OmeE1S7rV/N0ufVENqzSODayBJ8lq2KIPGr0hY+3GgbDneKVEijt5OjyvX4gQZIs
+            AtJCQ+gUTljOTQ==
+            =m8eO
             -----END PGP MESSAGE-----
           fp: 6C3BCD35DF04CE8A32871812068E9CB30A978247
     encrypted_regex: ^(data|stringData)$
