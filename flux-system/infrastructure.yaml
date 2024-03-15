@@ -14,7 +14,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./infrastructure/flux-core/sources
+  path: ./infrastructure/sources
   prune: true
   wait: true
 ---
@@ -33,7 +33,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./infrastructure/flux-core/notifications
+  path: ./infrastructure/notifications
   prune: true
   wait: true
 ---
@@ -52,7 +52,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./infrastructure/flux-core/image-automations
+  path: ./infrastructure/image-automations
   prune: true
   wait: true
 ---
