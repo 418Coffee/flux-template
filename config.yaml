@@ -1,4 +1,4 @@
-sops_pubkey: 6C3BCD35DF04CE8A32871812068E9CB30A978247
+sops_gpg: ""
 
 cert_manager:
   # values: https://github.com/cert-manager/cert-manager/blob/master/deploy/charts/cert-manager/values.yaml
