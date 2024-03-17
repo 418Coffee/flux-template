@@ -12,7 +12,7 @@ spec:
   timeout: 5m
   wait: true
   prune: true
-  path: "./infrastructure/controllers/monitoring/capacitor"
+  path: "./"
   sourceRef:
     kind: OCIRepository
     name: capacitor
