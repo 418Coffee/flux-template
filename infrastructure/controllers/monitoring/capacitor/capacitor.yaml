@@ -3,17 +3,16 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: apps
+  name: capacitor
   namespace: flux-system
 spec:
-  interval: 10m0s
-  retryInterval: 1m
-  timeout: 5m0s
-  dependsOn:
-    - name: configs
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-  path: ./apps
-  prune: true
+  targetNamespace: monitoring
+  interval: 1h
+  retryInterval: 2m
+  timeout: 5m
   wait: true
+  prune: true
+  path: "./infrastructure/controllers/monitoring/capacitor"
+  sourceRef:
+    kind: OCIRepository
+    name: capacitor

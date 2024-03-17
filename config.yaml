@@ -1,0 +1,38 @@
+sops_pubkey: 6C3BCD35DF04CE8A32871812068E9CB30A978247
+
+cert_manager:
+  # values: https://github.com/cert-manager/cert-manager/blob/master/deploy/charts/cert-manager/values.yaml
+  values: {}
+
+cilium:
+  # values: https://docs.cilium.io/en/stable/helm-reference/
+  # https://github.com/cilium/cilium/blob/main/install/kubernetes/cilium/values.yaml
+  values: {}
+
+external_dns:
+  # values: https://github.com/kubernetes-sigs/external-dns/blob/master/charts/external-dns/values.yaml
+  values: {}
+
+kube_prometheus_stack:
+  # values: https://github.com/prometheus-community/helm-charts/blob/main/charts/kube-prometheus-stack/values.yaml
+  values: {}
+
+kured:
+  # values: https://github.com/kubereboot/charts/blob/main/charts/kured/values.yaml
+  values: {}
+
+loki:
+  # values: https://github.com/grafana/loki/blob/main/production/helm/loki/values.yaml
+  values: {}
+
+promtail:
+  # values: https://github.com/grafana/helm-charts/blob/main/charts/promtail/values.yaml
+  values: {}
+
+system_upgrade_controller:
+  # values: https://github.com/nimbolus/helm-charts/blob/main/charts/system-upgrade-controller/values.yaml
+  values: {}
+
+traefik:
+  # values: https://github.com/traefik/traefik-helm-chart/blob/master/traefik/values.yaml
+  values: {}
