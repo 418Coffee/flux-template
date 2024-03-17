@@ -29,6 +29,10 @@ promtail:
   # values: https://github.com/grafana/helm-charts/blob/main/charts/promtail/values.yaml
   values: {}
 
+reloader:
+  # values: https://github.com/stakater/Reloader/blob/master/deployments/kubernetes/chart/reloader/values.yaml
+  values: {}
+
 system_upgrade_controller:
   # values: https://github.com/nimbolus/helm-charts/blob/main/charts/system-upgrade-controller/values.yaml
   values: {}
