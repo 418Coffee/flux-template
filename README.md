@@ -12,6 +12,27 @@ A lot of Flux template repositories expect you have already decided what type of
 
 ## Overview
 
+### Flux Kustomization Reconciliation Flowchart
+
+```mermaid
+flowchart TD;
+    id1[apps] -->|dependsOn| id2[configs]
+    %% https://github.com/mermaid-js/mermaid/issues/2977
+    subgraph "`&nbsp**infrastructure**&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp`"
+        id2[configs] -->|dependsOn| id3[controllers]
+        %% https://github.com/mermaid-js/mermaid/issues/2977
+        subgraph "`&nbsp**controllers**&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp`"
+            id3[controllers] -->|dependsOn| id4[monitoring]
+            id4[upgrade] -->|dependsOn| id5[monitoring]
+            id5[monitoring] -->|dependsOn| id6[network]
+        end
+        id6[network] -->|dependsOn| id7[image-automations]
+        id7[image-automations] -->|dependsOn| id8[sources]
+        id8[sources] -->|dependsOn| id9[notifications]
+        id9[notifications]
+    end
+```
+
 A fully set up repository structure is as follows:
 
 ### Top directories
@@ -23,7 +44,7 @@ A fully set up repository structure is as follows:
 - `templates`: yaml template files
 - `tools`: workspace and template rendering
 
-Flux is setup to only look at `apps`, `cluster` and `infrastructure`.
+Flux is set up to only look at `apps`, `cluster` and `infrastructure`:
 
 ```
 ├── apps
@@ -79,11 +100,15 @@ The `configs`, `image-automations`, `notifications` directories by default have 
     └── kustomization.yaml
 ```
 
-The `controllers` and `sources` directories have the following sub directories respectively:
+The `controllers` and `sources` directories have the following sub directories:
+
+#### controllers
 
 - `monitoring`: Monitoring controllers
 - `network`: Network controllers
 - `upgrade`: Upgrade controllers
+
+#### sources
 
 - `bucket`: [Buckets](https://fluxcd.io/flux/components/source/buckets/)
 - `git`: [GitRepositories](https://fluxcd.io/flux/components/source/gitrepositories/)
