@@ -12,6 +12,69 @@ A lot of Flux template repositories expect you have already decided what type of
 
 ## Overview
 
+### Stack
+
+<div align="center">
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td><a href="https://fluxcd.io/">Flux</a></td>
+        <td>Automated Kubernetes cluster updates using GitOps</td>
+    </tr>
+    <tr>
+        <td><a href="https://github.com/getsops/sops">SOPS</a></td>
+        <td>Secret management</td>
+    </tr>
+    <tr>
+        <td><a href="https://cilium.io/">Cilium</a></td>
+        <td>eBPF-based Networking, Observability, Security.</td>
+    </tr>
+    <tr>
+        <td><a href="https://cert-manager.io/">cert-manager</a></td>
+        <td>X.509 certificate management</td>
+    </tr>
+    <tr>
+        <td><a href="https://kubernetes-sigs.github.io/external-dns/">ExternalDNS</a></td>
+        <td>Synchronize exposed Kubernetes Services and Ingresses with DNS providers</td>
+    </tr>
+    <tr>
+        <td><a href="https://traefik.io/traefik/">Traefik</a></td>
+        <td>Edge Router / Ingress</td>
+    </tr>
+    <tr>
+        <td><a href="https://github.com/gimlet-io/capacitor">Capacitor</a></td>
+        <td>General purpose UI for Flux</td>
+    </tr>
+    <tr>
+        <td><a href="https://github.com/prometheus-operator/kube-prometheus">kube-prometheus</a></td>
+        <td>Monitoring stack, including Prometheus, Grafana, and Alertmanager</td>
+    </tr>
+    <tr>
+        <td><a href="https://grafana.com/oss/loki/">Loki</a></td>
+        <td>Log aggregation</td>
+    </tr>
+    <tr>
+        <td><a href="https://grafana.com/docs/loki/latest/send-data/promtail/">Promtail</a></td>
+        <td>Log discovery</td>
+    </tr>
+    <tr>
+        <td><a href="https://kured.dev/">Kured</a></td>
+        <td>Reboot Daemon</td>
+    </tr>
+    <tr>
+        <td><a href="https://github.com/rancher/system-upgrade-controller">System Upgrade Controller</a></td>
+        <td>Automated node updates</td>
+    </tr>
+    <tr>
+        <td><a href="https://docs.renovatebot.com/">Renovate</a></td>
+        <td>Automated dependency updates</td>
+    </tr>
+</table>
+</div>
+
 ### Flux Kustomization Reconciliation Flowchart
 
 ```mermaid
