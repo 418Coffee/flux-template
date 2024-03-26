@@ -14,7 +14,7 @@ A lot of Flux template repositories expect you have already decided what type of
 
 ### Stack
 
-All installed core components are optional, you can choose to only use the repository structure as a starting point.
+All installed core components are installed by default but optional, you can choose to only use the repository structure as a starting point.
 
 <div align="center">
 <table>
