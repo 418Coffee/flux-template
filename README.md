@@ -71,8 +71,8 @@ All installed core components are installed by default but optional, you can cho
         <td>Automated node updates</td>
     </tr>
     <tr>
-        <td><a href="https://docs.renovatebot.com/">Reloader</a></td>
-        <td>Auto-reloads Kubernetes resources based on ConfigMap/Secret changes.</td>
+        <td><a href="https://github.com/stakater/Reloader">Reloader</a></td>
+        <td>Auto-reload Kubernetes resources based on ConfigMap/Secret changes</td>
     </tr>
 </table>
 </div>
