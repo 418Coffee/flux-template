@@ -112,20 +112,20 @@ A fully set up repository structure is as follows:
 Flux is set up to only look at `apps`, `cluster` and `infrastructure`:
 
 ```
-├── apps
+├── 📁 apps
 │   └── kustomization.yaml
 │  
-├── cluster
-│   ├── flux-system
+├── 📁 cluster
+│   ├── 📁 flux-system
 │   ├── apps.yaml
 │   └── infrastructure.yaml
 |
-└── infrastructure
-    ├── configs
-    ├── controllers
-    ├── image-automations
-    ├── notifications
-    └── sources
+└── 📁 infrastructure
+    ├── 📁 configs
+    ├── 📁 controllers
+    ├── 📁 image-automations
+    ├── 📁 notifications
+    └── 📁 sources
 ```
 
 #### Applications
@@ -149,19 +149,19 @@ The `infrastructure` is structured into 5 sub directories:
 The `configs`, `image-automations`, `notifications` directories by default have no definitions. For brevity, they are omitted from the following view:
 
 ```
-./infrastructure
-├── controllers
-│   ├── monitoring
-|   ├── network
-|   ├── upgrade
+📁 infrastructure
+├── 📁 controllers
+│   ├── 📁 monitoring
+|   ├── 📁 network
+|   ├── 📁 upgrade
 |   ├── reloader.yaml
 |   └── kustomization.yaml
 │  
 └── sources
-    ├── bucket
-    ├── git
-    ├── oci
-    ├── helmrepos
+    ├── 📁 bucket
+    ├── 📁 git
+    ├── 📁 oci
+    ├── 📁 helmrepos
     └── kustomization.yaml
 ```
 
