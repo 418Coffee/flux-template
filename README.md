@@ -182,7 +182,83 @@ The `controllers` and `sources` directories have the following sub directories:
 
 ## Quickstart
 
-TODO
+Getting started is easy, the following guide uses GitHub as a Git server.
+
+#### Prerequisites
+
+- A (preferably clean) Kubernetes cluster that does not have Flux installed, can be any distribution. For local testing you can use something like [minikube](https://minikube.sigs.k8s.io/docs/), [kind](https://kind.sigs.k8s.io/), [microk8s](https://microk8s.io/), etc.
+- [age](https://github.com/FiloSottile/age) for creating secrets.
+- [just](https://github.com/casey/just) for commands.
+- [Docker](https://www.docker.com/) for containerized work environment.
+
+1. [Create a new Git repository by using this one as a template](https://github.com/new?template_name=flux-template&template_owner=418Coffee).
+
+2. Create an age key:
+
+```sh
+age-keygen -o flux.agekey
+```
+
+3. Build workspace container:
+
+```sh
+just build
+```
+
+4. Run workspace container:
+
+```sh
+just tools
+```
+
+3. Fill in [`config.yaml`](https://github.com/418Coffee/flux-template/blob/main/config.yaml) with your age key(s) and your controller values.
+
+4. Render templates:
+
+```sh
+just render
+```
+
+5. Create a `flux-system` namespace and create the sops-age secret:
+
+#### Create flux-system namespace:
+
+```sh
+kubectl create ns flux-system
+```
+
+#### Create sops-age secret:
+
+```sh
+cat flux.agekey | kubectl create secret generic sops-age \
+   --namespace=flux-system \
+   --from-file=age.agekey=/dev/stdin
+```
+
+6. Bootstrap Flux:
+
+Generate a [GitHub PAT](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) that can create repositories by checking all permissions under `repo`.
+
+#### Export values:
+
+```sh
+export GITHUB_TOKEN=<your-token>
+export GITHUB_USER=<your-username>
+export GITHUB_REPO=<your-repo>
+```
+
+#### Bootstrap:
+
+```sh
+flux bootstrap github \
+ --components-extra=image-reflector-controller,image-automation-controller \
+ --owner=$GITHUB_USER \
+ --repository=$GITHUB_REPO \
+ --branch=main \
+ --path=cluster \
+ --read-write-key \
+ --personal
+```
 
 ## Considerations
 
