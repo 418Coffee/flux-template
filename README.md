@@ -157,7 +157,7 @@ The `configs`, `image-automations`, `notifications` directories by default have 
 |   ├── reloader.yaml
 |   └── kustomization.yaml
 │  
-└── sources
+└── 📁 sources
     ├── 📁 bucket
     ├── 📁 git
     ├── 📁 oci
