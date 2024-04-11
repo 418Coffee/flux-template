@@ -1,6 +1,6 @@
 # (WIP) flux-template - An opinionated cluster agnostic Flux GitOps template repository
 
-A lot of Flux template repositories expect you have already decided what type of Kubernetes distribution you want to use (i.e. the same one they are using). It works when your goals align with theirs but it can be a pain when they're even slightly off. This repository proposes the opposite approach, you know what core applications you want to run on your cluster, but you're not yet sure about the cluster infrastructure.
+A lot of Flux template repositories expect you have already decided what type of Kubernetes distribution you want to use (i.e. the same one they are using). It works when you're following their design but it can be a pain when you even have a slighly different setup. This repository proposes the opposite approach, you know what core applications you want to run on your cluster, but you're not yet sure about the cluster infrastructure.
 
 ## Table of contents
 
@@ -11,6 +11,8 @@ A lot of Flux template repositories expect you have already decided what type of
 - [License](#license)
 
 ## Overview
+
+This Flux template was created with a holistic but flexible view in mind. The repository structure is straightforward, easy to understand and easy to use. Still, every aspect is explained below:
 
 ### Stack
 
@@ -146,7 +148,7 @@ The `infrastructure` is structured into 5 sub directories:
 - `notifications`: [Notification Controllers](https://fluxcd.io/flux/components/notification/)
 - `sources`: [Source Controllers](https://fluxcd.io/flux/components/source/)
 
-The `configs`, `image-automations`, `notifications` directories by default have no definitions. For brevity, they are omitted from the following view:
+The `configs`, `image-automations`, `notifications` directories have no resources by default. For brevity, they are omitted from the following view:
 
 ```
 📁 infrastructure
