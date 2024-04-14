@@ -189,39 +189,51 @@ Getting started is easy, the following guide uses GitHub as a Git server.
 #### Prerequisites
 
 - A (preferably clean) Kubernetes cluster that does not have Flux installed, can be any distribution. For local testing you can use something like [minikube](https://minikube.sigs.k8s.io/docs/), [kind](https://kind.sigs.k8s.io/), [microk8s](https://microk8s.io/), etc.
-- [age](https://github.com/FiloSottile/age) for creating secrets.
+- [age](https://github.com/FiloSottile/age) for secret keys.
+- [sops](https://github.com/getsops/sops) for encrypting secrets.
 - [just](https://github.com/casey/just) for commands.
-- [Docker](https://www.docker.com/) for containerized work environment.
+- [Docker](https://www.docker.com/) for a containerized work environment.
 
 1. [Create a new Git repository by using this one as a template](https://github.com/new?template_name=flux-template&template_owner=418Coffee).
 
-2. Create an age key:
+2. Create an age key that will be used for encrypting cluster based secrets:
 
 ```sh
 age-keygen -o flux.agekey
 ```
 
-3. Build workspace container:
+Add the age secret key string (identity) `AGE-SECRET-KEY-1...` found in the file to the default identities file `~/.config/sops/age/keys.txt`.
+
+3. Fill [`config.yaml`](https://github.com/418Coffee/flux-template/blob/main/config.yaml) with your age public key (recipient) and your controller values.
+
+4. Add and encrypt the kubeconfig file:
+
+You can choose to use a different age key to encrypt the kubeconfig (this key will not be pushed to the cluster). Make sure that the identity also exists in the default identities file (`~/.config/sops/age/keys.txt`).
+
+```sh
+sops -e -i --age age... --encrypted-regex '^client-key-data$' --input-type yaml --output-type yaml kube
+config
+```
+
+5. Build workspace container:
 
 ```sh
 just build
 ```
 
-4. Run workspace container:
+6. Run workspace container:
 
 ```sh
 just tools
 ```
 
-3. Fill in [`config.yaml`](https://github.com/418Coffee/flux-template/blob/main/config.yaml) with your age key(s) and your controller values.
-
-4. Render templates:
+7. Render templates:
 
 ```sh
 just render
 ```
 
-5. Create a `flux-system` namespace and create the sops-age secret:
+8. Create a `flux-system` namespace and create the sops-age secret:
 
 #### Create flux-system namespace:
 
@@ -237,7 +249,7 @@ cat flux.agekey | kubectl create secret generic sops-age \
    --from-file=age.agekey=/dev/stdin
 ```
 
-6. Bootstrap Flux:
+9. Bootstrap Flux:
 
 Generate a [GitHub PAT](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) that can create repositories by checking all permissions under `repo`.
 
