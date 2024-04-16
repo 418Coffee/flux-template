@@ -211,7 +211,7 @@ Add the age secret key string (identity) `AGE-SECRET-KEY-1...` found in the file
 You can choose to use a different age key to encrypt the kubeconfig (this key will not be pushed to the cluster). Make sure that the identity also exists in the default identities file (`~/.config/sops/age/keys.txt`).
 
 ```sh
-sops -e -i --age age... --encrypted-regex '^client-key-data$' --input-type yaml --output-type yaml kube
+sops -e -i --age age... --encrypted-regex '^client-key-data$' --input-type yaml --output-type yaml kubeconfig
 config
 ```
 
