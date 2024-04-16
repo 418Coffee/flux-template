@@ -16,7 +16,7 @@ This Flux template was created with a holistic but flexible view in mind. The re
 
 ### Stack
 
-All installed core components are installed by default but optional, you can choose to only use the repository structure as a starting point.
+All core components are optional, you can choose to only use the repository structure as a starting point.
 
 <div align="center">
 <table>
