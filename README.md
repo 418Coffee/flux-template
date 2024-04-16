@@ -104,7 +104,6 @@ A fully set up repository structure is as follows:
 
 ### Top directories
 
-- `.keys`: pgp public keys
 - `apps`: user related deployments (e.g. webapps, game servers)
 - `cluster`: Flux configuration
 - `infrastructure`: common infrastructure components (e.g. monitoring, network)
