@@ -281,11 +281,11 @@ You know have a GitOps compliant cluster fully managed through a Git repository,
 
 ## Considerations
 
-**Why not a monorepo approach?**
+**_Why not a monorepo approach?_**
 
 A monorepo is great in theory, dev, staging and prod in one repository with the ability for overlays to minimize duplicated resource declaration. In practice it gets tangled quick, there are a lot of nuances between different environments that can result in more complexity than structure.
 
-**Why not use X for Y?**
+**_Why not use X for Y?_**
 
 That's for YOU to decide, this is only meant as a foundation for your own cluster/templates. You can choose to not install any core component and roll with your own.
 
