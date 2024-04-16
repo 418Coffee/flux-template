@@ -276,6 +276,10 @@ flux bootstrap github \
 
 If you wish to create a public repository, add the --private=false flag.
 
+10. Enjoy your cluster 🎉!
+
+You know have a GitOps compliant cluster fully managed through a Git repository, the sky's the limit 🚀!
+
 ## Considerations
 
 TODO
