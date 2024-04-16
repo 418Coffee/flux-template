@@ -291,3 +291,10 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
+## Acknowledgements
+
+This "solution" could not have been without the following OSS:
+
+- [kronform](https://github.com/MathiasPius/kronform)
+- [home-ops](https://github.com/onedr0p/home-ops)
