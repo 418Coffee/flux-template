@@ -274,6 +274,8 @@ flux bootstrap github \
  --personal
 ```
 
+If you wish to create a public repository, add the --private=false flag.
+
 ## Considerations
 
 TODO
