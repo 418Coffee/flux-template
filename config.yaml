@@ -1,5 +1,5 @@
 # Age recipient used by the Flux to encrypt secrets.
-flux_age: 
+flux_age: ""
 
 cilium:
   install: false
