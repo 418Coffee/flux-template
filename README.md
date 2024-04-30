@@ -34,7 +34,7 @@ All core components are optional, you can choose to only use the repository stru
     </tr>
     <tr>
         <td><a href="https://cilium.io/">Cilium</a></td>
-        <td>eBPF-based Networking, Observability, Security.</td>
+        <td>eBPF-based Networking, Observability, Security</td>
     </tr>
     <tr>
         <td><a href="https://cert-manager.io/">cert-manager</a></td>
