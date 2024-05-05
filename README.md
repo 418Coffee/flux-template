@@ -280,6 +280,10 @@ You now have a GitOps compliant cluster fully managed through a Git repository, 
 
 ## Considerations
 
+**_This looks interesting but complicated, how can I understand this template better?_**
+
+I've tried to make everything as intuitive as possible. Looking at the individual files and cross-referencing values should help get a rough view of how things work. I also recommend you to carefully look over the [Flux documentation](https://fluxcd.io/flux/) whenever you don't understand the contents of a file.
+
 **_Why not a monorepo approach?_**
 
 A monorepo is great in theory, dev, staging and prod in one repository with the ability for overlays to minimize duplicated resource declaration. In practice it gets tangled quick, there are a lot of nuances between different environments that can result in more complexity than structure.
