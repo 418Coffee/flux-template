@@ -2,6 +2,9 @@
 
 A lot of Flux template repositories expect you have already decided what type of Kubernetes distribution you want to use (i.e. the same one they are using). It works when you're following their design but it can be a pain when you even have a slighly different setup. This repository proposes the opposite approach, you know what core applications you want to run on your cluster, but you're not yet sure about the cluster infrastructure.
 
+\
+[hetzner-k3s-flux-template](https://github.com/418Coffee/hetzner-k3s-flux-template) is a real-world example I made using this template.
+
 ## Table of contents
 
 - [Overview](#overview)
